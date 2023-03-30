@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins&display=swap');
+
+:root {
+    --navy: #37306B;
+    --purple: #66347F;
+    --magenta: #9E4784;
+    --peach: #D27685;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
