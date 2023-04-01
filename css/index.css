@@ -1,0 +1,139 @@
+@import url(layout.css);
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: #28234e34;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    z-index: 99;
+}
+
+header h2 {
+    user-select: none;
+    font-size: 1.5em;
+    font-weight: 500;
+    color: aliceblue;
+}
+
+header a {
+    margin-left: 20px;
+    font-size: 1.1em;
+    font-weight: 500;
+    text-decoration: none;
+    color: aliceblue;
+}
+
+main {
+    background: var(--navy);
+    color: aliceblue;
+    font-size: 1em;
+}
+
+section.home-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100svh;
+}
+
+section.home-text.objetivo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+div#conteudo-objetivo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2em;
+    height: 100%;
+    width: 100%;
+    box-shadow: #28234e34 4px 4px 4px 1em;
+}
+
+section.home-text.objetivo figure {
+    width: 100%;
+    height: 100%;
+}
+
+section.home-text.objetivo img {
+    height: 100%;
+    width: 100%;
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+}
+
+div#objetivo-text {
+    position: absolute;
+    display: flex;
+    text-align: justify;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 5em;
+    font-size: 2em;
+    font-weight: 600;
+    background: rgba(0, 0, 0, 0.212);
+}
+
+div#objetivo-text::before {
+    position: absolute;
+    left: 2.5em;
+    content: '';
+    width: 4px;
+    height: 50%;
+    background: aliceblue;
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    padding: 40px;
+    display: flex;
+    align-items: start;
+    justify-content: space-around;
+    background: #84549c;
+    color: aliceblue;
+}
+
+.footer-text {
+    text-align: justify;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: .5em;
+    font-size: 1.1em;
+}
+
+.footer-text a {
+    text-decoration: none;
+    color: #f8b1bd;
+
+}
+
+footer figure {
+    width: 200px;
+}
+
+footer img {
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+}
