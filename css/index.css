@@ -42,10 +42,12 @@ main {
 }
 
 section.home-text {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100svh;
+    min-height: 100svh;
+    max-height: fit-content;
 }
 
 section.home-text.objetivo {
@@ -62,7 +64,7 @@ div#conteudo-objetivo {
     gap: 1.2em;
     height: 100%;
     width: 100%;
-    box-shadow: #28234e34 4px 4px 4px 1em;
+    box-shadow: #28234e1c 4px 4px 4px 1em;
 }
 
 section.home-text.objetivo figure {
@@ -101,6 +103,26 @@ div#objetivo-text::before {
     background: aliceblue;
 }
 
+
+section.home-text.conteudo {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+}
+
+div#conteudo-text {
+    font-size: 1.5em;
+    border-radius: 20px;
+    background: var(--purple);
+    text-align: justify;
+}
+
+div#conteudo-text p {
+    padding: 1.5em;
+
+}
+
+
 footer {
     position: relative;
     width: 100%;
@@ -108,11 +130,21 @@ footer {
     display: flex;
     align-items: start;
     justify-content: space-around;
-    background: #84549c;
+    background: #28234e;
     color: aliceblue;
 }
 
+footer div::before {
+    position: absolute;
+    left: -1.5em;
+    content: '';
+    width: 4px;
+    height: 100%;
+    background: var(--navy);
+}
+
 .footer-text {
+    position: relative;
     text-align: justify;
     height: 100%;
     display: flex;
@@ -128,7 +160,12 @@ footer {
 
 }
 
+.footer-text a:hover {
+    text-decoration: underline;
+}
+
 footer figure {
+    position: relative;
     width: 200px;
 }
 
