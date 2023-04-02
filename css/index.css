@@ -1,40 +1,5 @@
 @import url(layout.css);
 
-body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-header {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    background: #28234e34;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    z-index: 99;
-}
-
-header h2 {
-    user-select: none;
-    font-size: 1.5em;
-    font-weight: 500;
-    color: aliceblue;
-}
-
-header a {
-    margin-left: 20px;
-    font-size: 1.1em;
-    font-weight: 500;
-    text-decoration: none;
-    color: aliceblue;
-}
-
 main {
     background: var(--navy);
     color: aliceblue;
@@ -51,126 +16,69 @@ section.home-text {
 }
 
 section.home-text.objetivo {
-    position: relative;
-    display: flex;
     flex-direction: column;
+    background: url(../images/space_image.jpg);
+    background-position: center;
+    background-size: cover;
 }
-
-div#conteudo-objetivo {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.2em;
-    height: 100%;
-    width: 100%;
-    box-shadow: #28234e1c 4px 4px 4px 1em;
-}
-
-section.home-text.objetivo figure {
-    width: 100%;
-    height: 100%;
-}
-
-section.home-text.objetivo img {
-    height: 100%;
-    width: 100%;
-    filter: blur(4px);
-    -webkit-filter: blur(4px);
-}
-
+    
 div#objetivo-text {
-    position: absolute;
+    position: relative;
     display: flex;
     text-align: justify;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 87%;
     height: 100%;
-    margin: 0 auto;
-    padding: 5em;
     font-size: 2em;
     font-weight: 600;
-    background: rgba(0, 0, 0, 0.212);
 }
 
 div#objetivo-text::before {
     position: absolute;
-    left: 2.5em;
+    left: -1em;
     content: '';
     width: 4px;
-    height: 50%;
+    height: 100%;
     background: aliceblue;
 }
 
 
 section.home-text.conteudo {
-    display: flex;
-    flex-direction: column;
-    padding: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+div#container {
+    height: 100%;
+    width: 100%;
+    background-image: url(../images/jornada_indigena.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+div#conteudo-bg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
 }
 
 div#conteudo-text {
-    font-size: 1.5em;
-    border-radius: 20px;
-    background: var(--purple);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100svh;
+    max-height: fit-content;
+    font-size: calc(1.5svh + 1rem);
+    background-color: rgba(0, 0, 0, 0.664);
     text-align: justify;
 }
 
 div#conteudo-text p {
-    padding: 1.5em;
-
-}
-
-
-footer {
-    position: relative;
-    width: 100%;
+    height: 100%;
     padding: 40px;
-    display: flex;
-    align-items: start;
-    justify-content: space-around;
-    background: #28234e;
-    color: aliceblue;
-}
-
-footer div::before {
-    position: absolute;
-    left: -1.5em;
-    content: '';
-    width: 4px;
-    height: 100%;
-    background: var(--navy);
-}
-
-.footer-text {
-    position: relative;
-    text-align: justify;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    gap: .5em;
-    font-size: 1.1em;
-}
-
-.footer-text a {
-    text-decoration: none;
-    color: #f8b1bd;
-
-}
-
-.footer-text a:hover {
-    text-decoration: underline;
-}
-
-footer figure {
-    position: relative;
-    width: 200px;
-}
-
-footer img {
-    border-radius: 20px;
-    width: 100%;
-    height: 100%;
 }
