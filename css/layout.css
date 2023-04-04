@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Merriweather:wght@300&family=Poppins&display=swap');
 :root {
     --navy: #37306B;
     --purple: #66347F;
@@ -48,9 +47,14 @@ header a {
     font-size: 1.1em;
     font-weight: 500;
     text-decoration: none;
+    transition: .5s;
     color: aliceblue;
 }
 
+header a:hover {
+    text-decoration: underline;
+    color: rgb(201, 213, 223);
+}
 
 /* Footer -------------------------------------------------------------------------------- */
 
@@ -88,11 +92,12 @@ footer div::before {
 .footer-text a {
     text-decoration: none;
     color: #f8b1bd;
-
+    transition: .5s;
 }
 
 .footer-text a:hover {
     text-decoration: underline;
+    color: #f88d9f;
 }
 
 footer figure {

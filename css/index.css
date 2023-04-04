@@ -11,6 +11,7 @@ section.home-text {
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height: 100vh;
     min-height: 100svh;
     max-height: fit-content;
 }
@@ -71,14 +72,17 @@ div#conteudo-text {
     justify-content: center;
     align-items: center;
     width: 100%;
+    min-height: 100vh;
     min-height: 100svh;
     max-height: fit-content;
+    font-size: calc(1.5vh + 1rem);
     font-size: calc(1.5svh + 1rem);
     background-color: rgba(0, 0, 0, 0.664);
     text-align: justify;
 }
 
 div#conteudo-text p {
+    font-family: 'Merriweather', serif;
     height: 100%;
     padding: 40px;
 }
