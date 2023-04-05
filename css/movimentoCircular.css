@@ -14,7 +14,7 @@ main {
     width: 100%;
 }
 
-section.mcu-conteudo {
+section.mcu-conteudo, section.po-conteudo {
     margin-top: 100px;
     margin-bottom: 100px;
     display: flex;
@@ -23,7 +23,7 @@ section.mcu-conteudo {
     align-items: center;
 }
 
-section.mcu-conteudo h3 {
+section h3 {
     font-size: 2em;
 }
 
