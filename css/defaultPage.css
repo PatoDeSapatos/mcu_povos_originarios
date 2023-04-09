@@ -29,7 +29,6 @@ section h3 {
 
 div.texto {
     text-align: justify;
-    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;

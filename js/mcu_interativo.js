@@ -5,19 +5,8 @@ const c = canvas.getContext('2d')
 canvas.width = innerWidth
 canvas.height = innerHeight
 
-const mouse = {
-    x: innerWidth / 2,
-    y: innerHeight / 2
-}
-
-const colors = ['#2185C5', '#7ECEFD', '#FFF6E5', '#FF7F66']
 
 // Event Listeners
-addEventListener('mousemove', (event) => {
-    mouse.x = event.clientX
-    mouse.y = event.clientY
-})
-
 addEventListener('resize', () => {
     canvas.width = innerWidth
     canvas.height = innerHeight
@@ -35,11 +24,27 @@ class Particle {
         this.radians = Math.random() * Math.PI * 2
         this.velocity = 0.05
         this.mcuRadius = Math.random
+        this.frequency = 0
+        this.period = 0
 
         this.update = () => {
+            const variables = {
+                radius : document.querySelector('input#radius').value, 
+                veloc : document.querySelector('input#veloc').value*0.01
+            }
+            this.velocity = variables.veloc
+            this.mcuRadius = variables.radius
+
             this.radians += this.velocity
-            this.x = x + Math.cos(this.radians) * 100
-            this.y = y + Math.sin(this.radians) * 100
+            this.x = x + Math.cos(this.radians) * this.mcuRadius
+            this.y = y + Math.sin(this.radians) * this.mcuRadius
+
+            this.period = (2*Math.PI)/(this.velocity/0.01)
+            this.frequency = 1/this.period
+
+            document.querySelector('#periodo').innerHTML = 'Período: ' + this.period + ' segundos'
+            document.querySelector('#frequencia').innerHTML = 'Frequência: ' +this.frequency + ' htz'
+
             this.draw()
         }
 
@@ -48,7 +53,7 @@ class Particle {
             const sinY = Math.sin(this.radians)
 
             c.beginPath()
-            c.arc(x, y, 100, 0, 2*Math.PI)
+            c.arc(x, y, this.mcuRadius, 0, 2*Math.PI)
             c.strokeStyle = 'black'
             c.stroke()
 
@@ -64,8 +69,8 @@ class Particle {
             c.fill()
             c.closePath()
 
-            let theta = Math.atan(40/100)
-            let h = Math.sqrt(100*100 + 1600)
+            let theta = Math.atan(60/this.mcuRadius)
+            let h = Math.sqrt(this.mcuRadius*this.mcuRadius + 1700)
             drawArrow(c, this.x, this.y, x + h*Math.cos(theta+this.radians), y + h*Math.sin(theta+this.radians), 3, '#9E4784')
             drawArrow(c, this.x - cosX*this.radius+2, this.y - sinY*this.radius+2, x + cosX*6, y + sinY*6, 3, '#66347F')
         }
@@ -116,7 +121,7 @@ function init() {
     particles = []
 
     for (let i = 0; i < 1; i++) {
-        particles.push( new Particle(canvas.width/2, canvas.height/3, 10, '#9E4784') )
+        particles.push( new Particle(canvas.width/2, canvas.height/2, 10, '#9E4784') )
     }
     console.log(particles)
 }
