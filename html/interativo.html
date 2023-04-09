@@ -11,22 +11,32 @@
     <header>
         <h2><a href="../index.html">MCU - Diferenças</a></h2>
         <nav>
-            <a href="./movimentoCircular.html">O Movimento Circular</a>
+            <a href="./diferencasVisoes.html">Cosmovisão Indígena e Ocidental</a>
         </nav>
     </header>
 
     <main>
-        <div class="texto">
-            <label for="radius">Raio</label>
-            <input type="range" name="radius" id="radius" min="50" max="400">
-            
-            <label for="veloc">Velocidade</label>
-            <input type="range" name="veloc" id="veloc" min="1" max="20">
-        </div>
-        <div>
-            <p id="periodo"></p>
-            <p id="frequencia"></p>
-        </div>
+        <section id="interativo-conteudo">
+            <div class="texto">
+
+                <label for="veloc">
+                    <input type="range" name="veloc" id="veloc" min="1" max="20">
+                    Velocidade
+                </label>
+
+                <label for="radius">
+                    <input type="range" name="radius" id="radius" min="50" max="350">
+                    Raio
+                </label>
+
+            </div>
+
+            <div class="texto">
+                <p id="periodo"></p>
+                <p id="frequencia"></p>
+            </div>
+        </section>
+
         <canvas></canvas>
     </main>
 
@@ -37,16 +47,16 @@
 
         <div class="footer-text">
             <h3>Explore: </h3>
-            <a href="#">Diferenças entre visões</a>
-            <a href="#">O movimento circular</a>
-            <a href="#">Interagindo com o MCU</a>
-            <a href="#">Os povos originários</a>
+            <a href="./diferencasVisoes.html">Diferenças entre cosmovisões</a>
+            <a href="./movimentoCircular.html">O movimento circular</a>
+            <a href="./interativo.html">Interagindo com o MCU</a>
+            <a href="./povosOriginarios.html">Os povos originários</a>
         </div>    
 
         <div class="footer-text">
             <h3>Contato: </h3>
-            <a href="#" target="_blank" rel="noopener noreferrer">Github</a>
-            <a href="mailto:">Email</a>
+            <a href="https://github.com/PatoDeSapatos" target="_blank" rel="noopener noreferrer">Github</a>
+            <a href="mailto:fernandes.alves1@aluno.ifsp.edu.br">Email</a>
         </div>
     </footer>
     <script src="../js/mcu_interativo.js"></script>

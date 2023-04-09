@@ -1,5 +1,39 @@
 @import url(./defaultPage.css);
 
 main {
-    background: var(--navy);
+    position: relative;
+    min-height: 100vh;
+}
+
+section#interativo-conteudo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 100%;
+    height: 100vh;
+    margin-top: 5em;
+    margin-bottom: 0;
+    z-index: 1;
+}
+
+div.texto {
+    display: block;
+    height: fit-content;
+    margin-bottom: 0;
+}
+
+div.texto p {
+    font-size: 1em;
+}
+
+div.texto label {
+    display: block;
+    margin: 0;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    z-index: 0;
 }

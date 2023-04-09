@@ -42,8 +42,8 @@ class Particle {
             this.period = (2*Math.PI)/(this.velocity/0.01)
             this.frequency = 1/this.period
 
-            document.querySelector('#periodo').innerHTML = 'Período: ' + this.period + ' segundos'
-            document.querySelector('#frequencia').innerHTML = 'Frequência: ' +this.frequency + ' htz'
+            document.querySelector('#periodo').innerHTML = 'Período: ' + this.period.toFixed(2) + ' segundos'
+            document.querySelector('#frequencia').innerHTML = 'Frequência: ' +this.frequency.toFixed(2) + ' htz'
 
             this.draw()
         }
@@ -70,8 +70,8 @@ class Particle {
             c.closePath()
 
             let theta = Math.atan(60/this.mcuRadius)
-            let h = Math.sqrt(this.mcuRadius*this.mcuRadius + 1700)
-            drawArrow(c, this.x, this.y, x + h*Math.cos(theta+this.radians), y + h*Math.sin(theta+this.radians), 3, '#9E4784')
+            let h = Math.sqrt(this.mcuRadius*this.mcuRadius + 4000)
+            drawArrow(c, this.x, this.y, x + h*Math.cos(theta+this.radians), y + h*Math.sin(theta+this.radians), 2, '#9E4784')
             drawArrow(c, this.x - cosX*this.radius+2, this.y - sinY*this.radius+2, x + cosX*6, y + sinY*6, 3, '#66347F')
         }
         
